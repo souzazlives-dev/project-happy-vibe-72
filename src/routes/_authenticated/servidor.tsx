@@ -5,6 +5,7 @@ import { Hash, Volume2, Plus, LogOut, Lock, Send } from "lucide-react";
 import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
+import { VoiceRoom } from "@/components/VoiceRoom";
 import {
   ROLE_LABEL,
   ROLE_ORDER,
@@ -297,14 +298,13 @@ function Servidor() {
         </header>
 
         {active?.type === "voz" ? (
-          <div className="flex flex-1 flex-col items-center justify-center gap-2 text-center">
-            <Volume2 className="h-10 w-10 text-primary" />
-            <p className="font-display text-lg">Sala de voz {active.name}</p>
-            <p className="max-w-sm text-sm text-muted-foreground">
-              Chamada com câmera e transmissão de tela é a próxima etapa do
-              Espancord.
-            </p>
-          </div>
+          <VoiceRoom
+            key={active.id}
+            channelId={active.id}
+            channelName={active.name}
+            userId={user.id}
+            userName={me?.display_name ?? "Você"}
+          />
         ) : (
           <>
             <div className="flex-1 space-y-4 overflow-y-auto px-5 py-4">

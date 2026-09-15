@@ -43,12 +43,12 @@ function Landing() {
 
       <main className="relative z-10 mx-auto max-w-6xl px-6 pb-24 pt-10">
         <h1 className="font-display max-w-3xl text-5xl font-bold leading-tight tracking-tight md:text-6xl">
-          O seu servidor.{" "}
-          <span className="text-primary">As suas regras.</span>
+          A mesa é sua.{" "}
+          <span className="text-primary">As green são nossas.</span>
         </h1>
         <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-          Deixe o link na sua bio. A pessoa entra com a conta Google ou com
-          e-mail, recebe um cargo e já começa a conversar nos canais liberados.
+          Deixe o link na sua bio. A galera entra com Google ou e-mail, recebe o
+          cargo e já acompanha os tips, as odds e as calls ao vivo.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-3">
@@ -70,18 +70,18 @@ function Landing() {
           {[
             {
               icon: MessagesSquare,
-              title: "Canais de texto",
-              text: "Crie quantos canais quiser e converse em tempo real com todo mundo.",
+              title: "Canais de tips",
+              text: "Canais em tempo real para entradas, odds e resultados do dia.",
             },
             {
               icon: ShieldCheck,
-              title: "Cargos e acesso",
-              text: "Dê cargos às pessoas e escolha quem pode entrar em cada sala.",
+              title: "Cargos e VIP",
+              text: "Dê cargos e libere as salas VIP só para quem você escolher.",
             },
             {
               icon: Video,
-              title: "Salas de voz",
-              text: "Salas para chamada, câmera e transmissão de tela — próxima etapa.",
+              title: "Calls ao vivo",
+              text: "Áudio, câmera e transmissão de tela para mostrar a banca e as apostas.",
             },
           ].map(({ icon: Icon, title, text }) => (
             <div
