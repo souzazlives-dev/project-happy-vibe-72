@@ -70,7 +70,7 @@ export function VoiceRoom({
       ?.getTracks()
       .forEach((t) => pc.addTrack(t, localStream.current!));
 
-    pc.ontrack = (e) => upsertPeer(remoteId, { stream: e.streams[0] });
+    pc.ontrack = (e) => upsertPeer(remoteId, { stream: e.streams[0] ?? null });
     pc.onicecandidate = (e) => {
       if (e.candidate)
         rt.current?.send({
