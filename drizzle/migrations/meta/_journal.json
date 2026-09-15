@@ -1,5 +1,13 @@
 {
   "version": "7",
   "dialect": "postgresql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1789491805792,
+      "tag": "0000_espancord_core",
+      "breakpoints": true
+    }
+  ]
 }
