@@ -226,6 +226,7 @@ export function VoiceRoom({
           })
         : await navigator.mediaDevices.getUserMedia({ video: true });
       const track = media.getVideoTracks()[0];
+      if (!track) return;
       const old = localStream.current?.getVideoTracks()[0];
       if (old) {
         old.stop();
