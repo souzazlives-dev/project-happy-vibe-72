@@ -1,5 +1,46 @@
 export type AppRole = "dono" | "admin" | "moderador" | "membro";
 
+export type CustomPermission =
+  | "manage_server"
+  | "manage_channels"
+  | "manage_messages"
+  | "kick_members"
+  | "ban_members";
+
+export const CUSTOM_PERMISSIONS: CustomPermission[] = [
+  "manage_server",
+  "manage_channels",
+  "manage_messages",
+  "kick_members",
+  "ban_members",
+];
+
+export const CUSTOM_PERMISSION_LABEL: Record<
+  CustomPermission,
+  { title: string; description: string }
+> = {
+  manage_server: {
+    title: "Gerenciar servidor",
+    description: "Editar nome, descrição e configurações gerais.",
+  },
+  manage_channels: {
+    title: "Gerenciar canais",
+    description: "Criar, renomear, restringir e excluir canais.",
+  },
+  manage_messages: {
+    title: "Moderar mensagens",
+    description: "Apagar mensagens de outros membros.",
+  },
+  kick_members: {
+    title: "Expulsar membros",
+    description: "Remover membros do servidor sem aplicar banimento.",
+  },
+  ban_members: {
+    title: "Banir membros",
+    description: "Bloquear o acesso de um membro ao servidor.",
+  },
+};
+
 export const ROLE_ORDER: AppRole[] = ["dono", "admin", "moderador", "membro"];
 
 export const ROLE_RANK: Record<AppRole, number> = {
@@ -25,7 +66,7 @@ export const ROLE_STYLE: Record<AppRole, string> = {
 
 export function topRole(roles: AppRole[]): AppRole {
   return roles.reduce<AppRole>(
-    (best, r) => (ROLE_RANK[r] > ROLE_RANK[best] ? r : best),
+    (best, role) => (ROLE_RANK[role] > ROLE_RANK[best] ? role : best),
     "membro",
   );
 }
