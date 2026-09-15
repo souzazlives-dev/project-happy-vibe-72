@@ -4,6 +4,7 @@
   "entries": [
     { "idx": 0, "version": "7", "when": 1789491805792, "tag": "0000_espancord_core", "breakpoints": true },
     { "idx": 1, "version": "7", "when": 1789491885791, "tag": "0001_gestao_de_cargos", "breakpoints": true },
-    { "idx": 2, "version": "7", "when": 1789495200000, "tag": "0002_discord_admin", "breakpoints": true }
+    { "idx": 2, "version": "7", "when": 1789495200000, "tag": "0002_discord_admin", "breakpoints": true },
+    { "idx": 3, "version": "7", "when": 1789497600000, "tag": "0003_voice_roles", "breakpoints": true }
   ]
 }

@@ -3,6 +3,7 @@ export type AppRole = "dono" | "admin" | "moderador" | "membro";
 export type CustomPermission =
   | "manage_server"
   | "manage_channels"
+  | "manage_roles"
   | "manage_messages"
   | "kick_members"
   | "ban_members";
@@ -10,6 +11,7 @@ export type CustomPermission =
 export const CUSTOM_PERMISSIONS: CustomPermission[] = [
   "manage_server",
   "manage_channels",
+  "manage_roles",
   "manage_messages",
   "kick_members",
   "ban_members",
@@ -26,6 +28,10 @@ export const CUSTOM_PERMISSION_LABEL: Record<
   manage_channels: {
     title: "Gerenciar canais",
     description: "Criar, renomear, restringir e excluir canais.",
+  },
+  manage_roles: {
+    title: "Gerenciar cargos",
+    description: "Criar, editar, excluir e atribuir cargos personalizados.",
   },
   manage_messages: {
     title: "Moderar mensagens",
